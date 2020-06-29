@@ -88,10 +88,10 @@
       "never-prefix"
     ],
     "label-position": true,
-    "linebreak-style": [
+    /*"linebreak-style": [
       true,
       "LF"
-    ],
+    ],*/
     "max-line-length": [
       true,
       140
