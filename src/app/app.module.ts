@@ -15,6 +15,7 @@ import { ApiInterceptor } from './interceptors/api.interceptor';
 import { MatSnackBarModule } from '@angular/material';
 import { ToolbarModule } from './components/toolbar/toolbar.module';
 import { BreadcrumbsModule } from './components/breadcrumbs/breadcrumbs.module';
+import { AuthorFormModule } from './modal-views/author-form/author-form.module';
 
 @NgModule({
   declarations: [

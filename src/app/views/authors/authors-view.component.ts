@@ -7,6 +7,7 @@ import { RoutePath } from '../../app-utils';
 enum AuthorsColumn {
   Name = 'Name',
   Email = 'Email',
+  Skill = 'Skill',
   Recipes = 'Recipes',
 }
 
@@ -21,6 +22,7 @@ export class AuthorsViewComponent {
   readonly columns: AuthorsColumn[] = [
     AuthorsColumn.Name,
     AuthorsColumn.Email,
+    AuthorsColumn.Skill,
     AuthorsColumn.Recipes,
   ];
 
