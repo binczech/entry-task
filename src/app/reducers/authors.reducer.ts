@@ -31,10 +31,10 @@ export function authorsReducer(state: AuthorsState = INITIAL_STATE,
     case PostAuthorSuccessAction.type:
       return {
         ...state,
-        data: {
+        data: [
           ...state.data,
-          [action.author.id!]: action.author
-        },
+          action.author
+        ],
         loading: false
       };
 
