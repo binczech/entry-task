@@ -39,6 +39,7 @@
     "@angular/language-service": "~7.1.0",
     "@types/node": "~8.9.4",
     "codelyzer": "^4.5.0",
+    "node-sass": "^4.14.1",
     "rxjs-tslint": "^0.1.8",
     "stylelint": "^9.9.0",
     "ts-node": "~7.0.0",
