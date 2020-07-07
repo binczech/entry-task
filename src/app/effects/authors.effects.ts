@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
-import { GetAuthorsRequestAction, GetAuthorsSuccessAction,
-         PostAuthorRequestAction, PostAuthorSuccessAction } from '../actions/authors.actions';
+import { GetAuthorsRequestAction, GetAuthorsSuccessAction } from '../actions/authors.actions';
 import { RoutePath, whenNavigated } from '../app-utils';
 import { AuthorModel } from '../models/api/author.model';
 import { map, switchMap } from 'rxjs/operators';
@@ -22,13 +21,6 @@ export class AuthorsEffects {
     ofType(GetAuthorsRequestAction.type),
     switchMap(() => this.http.get<AuthorModel[]>('/authors').pipe(
       map(authors => new GetAuthorsSuccessAction(authors))
-    ))
-  );
-
-  @Effect() readonly postAuthor$ = this.actions$.pipe(
-    ofType(PostAuthorRequestAction.type),
-    switchMap(({author}: PostAuthorRequestAction) => this.http.post<AuthorModel>('/authors', author).pipe(
-      map(response => new PostAuthorSuccessAction(response))
     ))
   );
 

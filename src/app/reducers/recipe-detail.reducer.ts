@@ -42,7 +42,7 @@ export function recipeDetailReducer(state: RecipeDetailState = INITIAL_STATE,
       return {
         ...state,
         loading: false
-      }; 
+      };
 
     default:
       return state;

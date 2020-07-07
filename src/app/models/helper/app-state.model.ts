@@ -8,6 +8,7 @@ import { RouteModel } from './route.model';
 export type RecipeListState = ResourceModel<SimpleRecipeModel[]>;
 export type RecipeDetailState = ResourceModel<IdMapModel<RecipeModel>>;
 export type AuthorsState = ResourceModel<AuthorModel[]>;
+export type AuthorsFormState = ResourceModel<AuthorModel[]>;
 export type RouteState = RouteModel;
 export type ScrollState = number;
 
@@ -15,6 +16,7 @@ export interface AppStateModel {
   recipeList: RecipeListState;
   recipeDetail: RecipeDetailState;
   authors: AuthorsState;
+  authorsForm: AuthorsFormState;
   route: RouteState;
   scroll: ScrollState;
 }

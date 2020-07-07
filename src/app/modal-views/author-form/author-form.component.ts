@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
 import { AuthorModel } from '../../models/api/author.model';
-import { PostAuthorRequestAction } from '../../actions/authors.actions';
-import { select, Store } from '@ngrx/store';
+import { PostAuthorRequestAction } from '../../actions/authors-form.actions';
+import { Store } from '@ngrx/store';
 import { AppStateModel } from '../../models/helper/app-state.model';
 
 @Component({
@@ -59,7 +59,6 @@ export class AuthorFormComponent implements OnInit {
       avatar: '',
       skill: value['skill']
     };
-    console.log(author);
     this.store.dispatch(new PostAuthorRequestAction(author));
     this.closeDialog();
   }
